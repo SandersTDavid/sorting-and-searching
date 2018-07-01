@@ -9,8 +9,7 @@
 
             while (!found && !allListSearch)
             {
-               mid = (start + end) / 2;
-                               
+               mid = (start + end) / 2;             
                 if (data[mid] == numberWanted)
                 {
                     found = true;
@@ -19,7 +18,6 @@
                 {
                     allListSearch = true;
                 }
-
                 else if (numberWanted < data[mid])
                 {
                     end = mid -1;
