@@ -1,0 +1,17 @@
+ int[] data = new int[1];
+  private int sequencialSearch(int numberWanted)
+        {
+            int position = 0;
+          while (data[position] != numberWanted && position<data.Length -1 )
+            {
+                position++;
+            }
+            if (data[position] == numberWanted)
+            {
+                return position;
+            }
+            else
+            {
+                return -1;
+            }
+        }
