@@ -1,0 +1,26 @@
+ int[] data = new int[1];
+        private void insertionSort()
+        {
+            int startPosition, locationOfSmallest, counter, temp;
+            for (startPosition = 0; startPosition <= data.Length - 2; startPosition++)
+            {
+                locationOfSmallest = startPosition + 1;
+                for (counter = startPosition + 2; counter <= data.Length - 1; counter++)
+                {
+                    if (data[counter] < data[locationOfSmallest])
+                    {
+                        locationOfSmallest = counter;
+                    }
+
+                }
+                if (data[locationOfSmallest] < data[startPosition])
+                {
+                    temp = data[locationOfSmallest];
+                    data[locationOfSmallest] = data[startPosition];
+                    data[startPosition] = temp;
+                }
+
+            }
+            
+
+        }
