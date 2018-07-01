@@ -1,0 +1,40 @@
+ int[] data = new int[1];
+    int mid;
+        private int binarySearch(int numberWanted)
+        {
+            bool allListSearch = false;
+            int start = 0;
+            var found = false;
+            int end = data.Length;
+
+            while (!found && !allListSearch)
+            {
+               mid = (start + end) / 2;
+                               
+                if (data[mid] == numberWanted)
+                {
+                    found = true;
+                }
+                else if (start > end)
+                {
+                    allListSearch = true;
+                }
+
+                else if (numberWanted < data[mid])
+                {
+                    end = mid -1;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
+            }
+                if (found == true)
+                {
+                    return mid;
+                }
+                else
+                {
+                    return -1;
+                }
+          }
