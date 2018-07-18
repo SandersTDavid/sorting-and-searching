@@ -1,0 +1,22 @@
+// sorts array from largest to smallest
+var swap = function(array) {
+ for(var i = 0; i<array.length -1; i++){
+    var min = i;
+        for(var j = i +1; j < array.length; j++)
+            {
+            // Change to    <   here for sorting smallest to largest
+                if(array[j] > array[min])
+                {min = j;}
+            }
+        var temp = array[i];
+        array[i] = array[min];
+        array[min] = temp;
+    }
+};
+
+var testArray = [7, 9, 4];
+swap(testArray, 0, 1);
+
+println(testArray);
+
+Program.assertEqual(testArray, [9, 7, 4]);
